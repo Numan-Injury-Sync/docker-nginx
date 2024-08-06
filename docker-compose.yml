@@ -6,6 +6,7 @@ services:
       dockerfile: dockerfile
 
     environment:
+      FRONTEND_URL: http://172.31.10.215:3000/
       BACKEND_URL: http://172.31.10.215:3001/
       DOMAIN: 54.67.100.0
     # volumes:

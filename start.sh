@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Substitute environment variables in the Nginx config template
-envsubst '$BACKEND_URL $DOMAIN' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf
+envsubst '$BACKEND_URL $FRONTEND_URL $DOMAIN' < /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf
 
 nginx -g 'daemon off;'
 # Start Nginx
