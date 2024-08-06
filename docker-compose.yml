@@ -1,0 +1,31 @@
+version: '1.1'
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: dockerfile
+
+    environment:
+      BACKEND_URL: http://172.31.10.215:3001/
+      DOMAIN: 54.67.100.0
+    # volumes:
+    #   - ./dist:/usr/share/nginx/html
+    #   - /etc/letsencrypt/live/psnetsol.southeastasia.cloudapp.azure.com/fullchain.pem:/etc/ssl/certs/fullchain.pem
+    #   - /etc/letsencrypt/live/psnetsol.southeastasia.cloudapp.azure.com/privkey.pem:/etc/ssl/private/privkey.pem
+    #   - /etc/letsencrypt/options-ssl-apache.conf:/etc/ssl/options-ssl-apache.conf
+    ports:
+      - 80:80
+    container_name: nginx-dev-container
+  # qa:
+  #   build:
+  #     context: .
+  #     dockerfile: dockerfile
+  #   environment:
+  #     BACKEND_URL: http://host.docker.internal:8080/
+  #   volumes:
+  #     - ./dist:/usr/share/nginx/html
+  #   ports:
+  #     - 80:80
+
+
+  #   container_name: nginx-qa-container
