@@ -12,12 +12,12 @@ services:
     restart: always
     volumes:
       #- ./dist:/usr/share/nginx/html
-      - /home/ubuntu/injur-sync/docker-nginx.fullchain.pem:/etc/ssl/certs/fullchain.pem
-      - /home/ubuntu/injur-sync/docker-nginx/privkey.pem:/etc/ssl/private/privkey.pem
+      # - /home/ubuntu/injur-sync/docker-nginx/fullchain.pem:/etc/ssl/certs/fullchain.pem
+      # - /home/ubuntu/injur-sync/docker-nginx/privkey.pem:/etc/ssl/private/privkey.pem
     #   - /etc/letsencrypt/options-ssl-apache.conf:/etc/ssl/options-ssl-apache.conf
     ports:
       - 80:80
-      - 443:443
+      # - 443:443
     container_name: nginx-dev-container
   # qa:
   #   build:
